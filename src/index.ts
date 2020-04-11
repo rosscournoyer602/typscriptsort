@@ -1,0 +1,21 @@
+import { Sorter } from './Sorter';
+import { NumbersCollection } from './NumbersCollection';
+import { CharCollection } from './CharCollection';
+import { LinkedList } from './LinkedList';
+
+const numbers = new NumbersCollection([1000, 300, 6, -22]);
+const string = new CharCollection('CbADz');
+const linkedList = new LinkedList();
+linkedList.add(500);
+linkedList.add(-10);
+linkedList.add(-3);
+linkedList.add(4);
+const llsorter = new Sorter(linkedList);
+const numberSorter = new Sorter(numbers);
+const charSorter = new Sorter(string);
+numberSorter.sort();
+charSorter.sort();
+llsorter.sort();
+console.log(numbers.data);
+console.log(string.data);
+linkedList.print();
